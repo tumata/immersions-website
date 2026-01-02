@@ -231,8 +231,18 @@
 
         .contact-form-container iframe {
             width: 100%;
-            min-height: 800px;
+            height: 1000px;
             border: none;
+        }
+
+        @media (max-width: 488px) {
+            .contact-form-container {
+                padding: 20px;
+            }
+
+            .contact-form-container iframe {
+                height: 1100px;
+            }
         }
 
         .carousel-nav {
