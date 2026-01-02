@@ -106,17 +106,52 @@
         .schedule-table td {
             padding: 15px;
             text-align: center;
-            border: 1px solid #e0e0e0;
+            border: 2px solid white;
         }
 
         .schedule-table th {
-            background: #667eea;
-            color: white;
+            background: #667eeae6;
+            color: black;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         .schedule-table td {
             background: white;
+        }
+
+        .schedule-table .time-col {
+            background: #667eea8b;
+            font-weight: 500;
+        }
+
+        .schedule-table .breakfast-cell {
+            background: #ffd4d4;
+        }
+
+        .schedule-table .lesson-cell {
+            background: #f5d4f0;
+        }
+
+        .schedule-table .lunch-cell {
+            background: #d4f0f5;
+        }
+
+        .schedule-table .excursion-cell {
+            background: #e8f5d4;
+        }
+
+        .schedule-table .fullday-cell {
+            background: #ffe5b8;
+        }
+
+        .schedule-table .arrival-cell {
+            background: #e5d4f5;
+        }
+
+        .schedule-table .empty-cell {
+            background: transparent;
+            border: none;
         }
 
         .location-info {
@@ -392,42 +427,41 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>8:30-9:00</strong></td>
-                        <td>-</td>
-                        <td>Breakfast with teacher</td>
-                        <td>Breakfast with teacher</td>
-                        <td>Breakfast with teacher</td>
-                        <td rowspan="2">Included: Full day excursion</td>
-                        <td>Breakfast with teacher</td>
-                        <td>Breakfast at hotel</td>
+                        <td class="time-col"><strong>8:30-9:00</strong></td>
+                        <td class="empty-cell"></td>
+                        <td class="breakfast-cell">Breakfast with teacher</td>
+                        <td class="breakfast-cell">Breakfast with teacher</td>
+                        <td class="breakfast-cell">Breakfast with teacher</td>
+                        <td class="fullday-cell" rowspan="4">Included:<br>Full day excursion</td>
+                        <td class="breakfast-cell">Breakfast with teacher</td>
+                        <td class="breakfast-cell">Breakfast at the hotel</td>
                     </tr>
                     <tr>
-                        <td><strong>9:00-12:00</strong></td>
-                        <td>-</td>
-                        <td>French lesson</td>
-                        <td>French lesson</td>
-                        <td>French lesson</td>
-                        <td>French lesson</td>
-                        <td>Departure before 11am</td>
+                        <td class="time-col"><strong>9:00-12:00</strong></td>
+                        <td class="empty-cell"></td>
+                        <td class="lesson-cell">French lesson</td>
+                        <td class="lesson-cell">French lesson</td>
+                        <td class="lesson-cell">French lesson</td>
+                        <td class="lesson-cell">French lesson</td>
+                        <td class="arrival-cell">Departure before 11 am</td>
                     </tr>
                     <tr>
-                        <td><strong>12:00-13:30</strong></td>
-                        <td>-</td>
-                        <td>Lunch with teacher</td>
-                        <td>Lunch with teacher</td>
-                        <td>Lunch with teacher</td>
-                        <td rowspan="2">Full day excursion continues</td>
-                        <td>Lunch with teacher</td>
-                        <td>-</td>
+                        <td class="time-col"><strong>12:00-13:30</strong></td>
+                        <td class="empty-cell"></td>
+                        <td class="lunch-cell">Lunch with teacher</td>
+                        <td class="lunch-cell">Lunch with teacher</td>
+                        <td class="lunch-cell">Lunch with teacher</td>
+                        <td class="lunch-cell">Lunch with teacher</td>
+                        <td class="empty-cell"></td>
                     </tr>
                     <tr>
-                        <td><strong>Afternoon</strong></td>
-                        <td>Arrival from 3pm - Welcome drink (apéro)</td>
-                        <td>Excursion or Free Time</td>
-                        <td>Excursion or Free Time</td>
-                        <td>Excursion or Free Time</td>
-                        <td>Excursion or Free Time</td>
-                        <td>-</td>
+                        <td class="time-col"><strong>Afternoon</strong></td>
+                        <td class="arrival-cell">Arrival from 3pm- Welcome drink (apéro time)</td>
+                        <td class="excursion-cell">Excursion or Free Time</td>
+                        <td class="excursion-cell">Excursion or Free Time</td>
+                        <td class="excursion-cell">Excursion or Free Time</td>
+                        <td class="excursion-cell">Excursion or Free Time</td>
+                        <td class="empty-cell"></td>
                     </tr>
                 </tbody>
             </table>
