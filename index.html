@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Your Site Title | Short Keyword Phrase</title>
+  <meta name="description" content="A short, clear description of your site (140–160 characters) for SEO and social sharing." />
+
+  <!-- SEO basics -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.yourdomain.com/" />
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="Your Site Title" />
+  <meta property="og:description" content="A short description of your site." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.yourdomain.com/" />
+
+  <!-- Minimal styling -->
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin: 1rem 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Your Headline</h1>
+
+    <p>
+      This is a simple one-page website. It loads fast, works everywhere,
+      and is ready for SEO. Replace this text with a clear description
+      of what you offer or what this site is about.
+    </p>
+
+    <p>
+      <strong>Why this page?</strong><br />
+      It’s intentionally minimal: no framework, no tracking, no lock-in.
+      Perfect for testing domains, ideas, or launching something quickly.
+    </p>
+
+    <p>
+      <a href="mailto:you@yourdomain.com">Contact</a>
+    </p>
+
+    <footer>
+      © <span id="year"></span> Your Name
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
