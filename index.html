@@ -19,7 +19,7 @@
 
         .hero {
             height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7)), url('images/hero-rhone.jpg') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,11 +33,13 @@
             margin-bottom: 1rem;
             text-transform: uppercase;
             letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero-content p {
             font-size: 1.5rem;
             font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .section {
@@ -129,6 +131,16 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         .carousel {
@@ -151,6 +163,14 @@
             padding: 40px;
         }
 
+        .carousel-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
         .carousel-nav {
             position: absolute;
             top: 50%;
@@ -163,6 +183,7 @@
             font-size: 1.5rem;
             z-index: 10;
             border-radius: 5px;
+            transition: background 0.3s;
         }
 
         .carousel-nav:hover {
@@ -190,6 +211,11 @@
             background: #ccc;
             margin: 0 5px;
             cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .dot:hover {
+            background: #999;
         }
 
         .dot.active {
@@ -218,6 +244,14 @@
             border-radius: 20px;
             font-size: 0.9rem;
             margin-bottom: 15px;
+        }
+
+        .excursion-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         .rates-container {
@@ -281,6 +315,15 @@
             .schedule-table th,
             .schedule-table td {
                 padding: 8px;
+            }
+
+            .carousel-image,
+            .excursion-image {
+                height: 250px;
+            }
+
+            .location-image {
+                height: 150px;
             }
         }
     </style>
@@ -396,6 +439,7 @@
         <h2>Localisation</h2>
         <div class="location-info">
             <div class="location-card">
+                <img src="images/tournon.jpg" alt="Tournon-sur-Rhône" class="location-image">
                 <h3>Tournon-sur-Rhône</h3>
                 <p>Nestled between the Rhône River and the hills of the Ardèche, Tournon-sur-Rhône is one of the oldest medieval towns in the region. Its highlights include:</p>
                 <ul>
@@ -405,6 +449,7 @@
                 </ul>
             </div>
             <div class="location-card">
+                <img src="images/tain.jpg" alt="Tain-l'Hermitage" class="location-image">
                 <h3>Tain-l'Hermitage</h3>
                 <p>Just across the footbridge lies Tain-l'Hermitage, world-renowned for its wines and chocolate culture. Visitors enjoy:</p>
                 <ul>
@@ -427,6 +472,7 @@
             <button class="carousel-nav next" onclick="moveCarousel('accommodation', 1)">❯</button>
             <div class="carousel-container" id="accommodation-container">
                 <div class="carousel-slide">
+                    <img src="images/hotel-exterior.jpg" alt="Historic 4-star hotel" class="carousel-image">
                     <h3>Hotel Room (For Group Immersion)</h3>
                     <ul>
                         <li>Stay in a charming historic 4-star hotel</li>
@@ -437,6 +483,7 @@
                     </ul>
                 </div>
                 <div class="carousel-slide">
+                    <img src="images/apartment-view.jpg" alt="Private apartment with Rhône view" class="carousel-image">
                     <h3>Private Apartment for 3 Guests (For Private Immersion)</h3>
                     <ul>
                         <li>Independent apartment with exceptional views of the Rhône and castle</li>
@@ -466,6 +513,7 @@
             <div class="carousel-container" id="excursions-container">
                 <div class="carousel-slide">
                     <div class="excursion-card">
+                        <img src="images/lyon-old-town.jpg" alt="Lyon Old Town" class="excursion-image">
                         <span class="excursion-badge">FULL DAY (with teacher)</span>
                         <h4>Discover Lyon & Lunch in a Bouchon</h4>
                         <ul>
@@ -478,6 +526,7 @@
                 </div>
                 <div class="carousel-slide">
                     <div class="excursion-card">
+                        <img src="images/vercors-cave.jpg" alt="Vercors Mountains and Cave" class="excursion-image">
                         <span class="excursion-badge">FULL DAY (with teacher)</span>
                         <h4>Vercors – Choranche Cave & Hike</h4>
                         <ul>
@@ -490,6 +539,7 @@
                 </div>
                 <div class="carousel-slide">
                     <div class="excursion-card">
+                        <img src="images/valrhona-chocolate.jpg" alt="Valrhona Chocolate Workshop" class="excursion-image">
                         <span class="excursion-badge">HALF DAY (without teacher)</span>
                         <h4>Valrhona & Pastry Workshop</h4>
                         <p>Discover the world-famous Cité du Chocolat Valrhona, a must-see destination for chocolate lovers and a cultural and gourmet experience.</p>
@@ -503,6 +553,7 @@
                 </div>
                 <div class="carousel-slide">
                     <div class="excursion-card">
+                        <img src="images/steam-train.jpg" alt="Mastrou Steam Train" class="excursion-image">
                         <span class="excursion-badge">HALF DAY (with teacher)</span>
                         <h4>The Mastrou – Steam Train</h4>
                         <ul>
@@ -516,6 +567,7 @@
                 </div>
                 <div class="carousel-slide">
                     <div class="excursion-card">
+                        <img src="images/palais-ideal.jpg" alt="Palais Idéal du Facteur Cheval" class="excursion-image">
                         <span class="excursion-badge">HALF DAY (with teacher)</span>
                         <h4>Palais Idéal du Facteur Cheval</h4>
                         <ul>
@@ -527,6 +579,7 @@
                 </div>
                 <div class="carousel-slide">
                     <div class="excursion-card">
+                        <img src="images/vineyard.jpg" alt="Hermitage Vineyards" class="excursion-image">
                         <span class="excursion-badge">HALF DAY (with teacher)</span>
                         <h4>Wine Tasting and Vineyard Visit</h4>
                         <ul>
